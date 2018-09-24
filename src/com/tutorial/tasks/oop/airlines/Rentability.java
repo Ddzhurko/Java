@@ -1,4 +1,4 @@
-package com.tutorial.tasks.oop.task9Change.airlines;
+package com.tutorial.tasks.oop.airlines;
 
 public interface Rentability {
 

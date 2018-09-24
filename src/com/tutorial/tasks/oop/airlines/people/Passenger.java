@@ -1,4 +1,4 @@
-package com.tutorial.tasks.oop.task9Change.airlines.people;
+package com.tutorial.tasks.oop.airlines.people;
 
 public class Passenger extends Person {
 

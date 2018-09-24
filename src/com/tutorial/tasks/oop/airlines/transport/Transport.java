@@ -1,4 +1,4 @@
-package com.tutorial.tasks.oop.task9Change.airlines.transport;
+package com.tutorial.tasks.oop.airlines.transport;
 
 public abstract class Transport {
 

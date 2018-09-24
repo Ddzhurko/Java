@@ -1,9 +1,9 @@
-package com.tutorial.tasks.oop.task9Change.airlines;
+package com.tutorial.tasks.oop.airlines;
 
-import com.tutorial.tasks.oop.task9Change.airlines.people.Passenger;
-import com.tutorial.tasks.oop.task9Change.airlines.transport.air.Airplane;
-import com.tutorial.tasks.oop.task9Change.airlines.transport.air.CargoAirplane;
-import com.tutorial.tasks.oop.task9Change.airlines.transport.air.CivilAirplane;
+import com.tutorial.tasks.oop.airlines.people.Passenger;
+import com.tutorial.tasks.oop.airlines.transport.air.Airplane;
+import com.tutorial.tasks.oop.airlines.transport.air.CargoAirplane;
+import com.tutorial.tasks.oop.airlines.transport.air.CivilAirplane;
 
 import java.util.ArrayList;
 import java.util.Comparator;

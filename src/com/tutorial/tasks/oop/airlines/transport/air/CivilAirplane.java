@@ -1,4 +1,4 @@
-package com.tutorial.tasks.oop.task9Change.airlines.transport.air;
+package com.tutorial.tasks.oop.airlines.transport.air;
 
 public class CivilAirplane extends Airplane {
 

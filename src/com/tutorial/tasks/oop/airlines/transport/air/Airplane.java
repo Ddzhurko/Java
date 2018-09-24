@@ -1,8 +1,8 @@
-package com.tutorial.tasks.oop.task9Change.airlines.transport.air;
+package com.tutorial.tasks.oop.airlines.transport.air;
 
-import com.tutorial.tasks.oop.task9Change.airlines.Rentability;
-import com.tutorial.tasks.oop.task9Change.airlines.transport.Transport;
-import com.tutorial.tasks.oop.task9Change.airlines.transport.TransportType;
+import com.tutorial.tasks.oop.airlines.Rentability;
+import com.tutorial.tasks.oop.airlines.transport.Transport;
+import com.tutorial.tasks.oop.airlines.transport.TransportType;
 
 public abstract class Airplane extends Transport implements Flyable, Rentability {
 
