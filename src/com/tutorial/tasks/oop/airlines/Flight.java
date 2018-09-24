@@ -28,33 +28,49 @@ public class Flight {
 
         // Create airplanes
 
-        Airplane passengersBort1 = new CivilAirplane("Boeing-747", 50.0, 20.2,
+        CivilAirplane passengersBort1 = new CivilAirplane("Boeing-747", 50.0, 20.2,
                 2, 300);
-        Airplane passengersBort2 = new CivilAirplane("Boeing-737", 150, 90,
+        CivilAirplane passengersBort2 = new CivilAirplane("Boeing-737", 150, 90,
                 1500, 250);
-        Airplane cargoBort2 = new CargoAirplane("AN-140", 5000, 500,
+        CargoAirplane cargoBort2 = new CargoAirplane("AN-140", 5000, 500,
                 2000, 3000);
-        Airplane cargoBort1 = new CargoAirplane("IL-76", 4000, 700,
+        CargoAirplane cargoBort1 = new CargoAirplane("IL-76", 4000, 700,
                 1500, 2000);
 
         // Create ArrayList of airplanes
         //Cargoes
 
         List<CargoAirplane> cargoes = new ArrayList<>();
-        cargoes.add((CargoAirplane) cargoBort1);
-        cargoes.add((CargoAirplane) cargoBort2);
+        cargoes.add(cargoBort2);
+        cargoes.add(cargoBort1);
+        cargoes.add(new CargoAirplane("IL-76-a", 3000, 700, 1500, 2000));
+
         System.out.println(cargoes);
 
         //Passengers
 
         List<CivilAirplane> civil = new ArrayList<>();
 
-        civil.add((CivilAirplane) passengersBort1);
-        civil.add((CivilAirplane) passengersBort2);
+        civil.add(passengersBort1);
+        civil.add(passengersBort2);
 
         //Sort
         System.out.println("Sorting cargoes by fuel consumption");
-        cargoes.sort(Comparator.comparing(CargoAirplane::getFuelConsumption));
+        //cargoes.sort(Comparator.comparing(CargoAirplane::getFuelConsumption));
+
+        cargoes.sort(new Comparator<CargoAirplane>() {
+            @Override
+            public int compare(CargoAirplane o1, CargoAirplane o2) {
+                if (o1.getFuelConsumption() < o2.getFuelConsumption()) {
+                    return -1;
+                } else if (o1.getFuelConsumption() > o2.getFuelConsumption()){
+                    return 1;
+                }
+
+                return 0;
+            }
+        });
+
         System.out.println(cargoes);
         System.out.println("\nSorting civil by capacity");
         civil.sort(Comparator.comparing(CivilAirplane::getPassengerPlacesNumber));

@@ -11,16 +11,6 @@ public class CargoAirplane extends Airplane {
     }
 
     @Override
-    public double getFuelConsumption() {
-        return super.getFuelConsumption();
-    }
-
-    @Override
-    public double getEnginePower(){
-        return super.getEnginePower();
-    }
-
-    @Override
     public double calculateRentability() {
         final double baseCoefficient = super.calculateRentability();
         return baseCoefficient + CARGO_COEFFICIENT * cargoWeight;

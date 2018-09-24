@@ -14,16 +14,6 @@ public abstract class Airplane extends Transport implements Flyable, Rentability
         this.engineNumber = engineNumber;
     }
 
-    @Override
-    public double getFuelConsumption() {
-        return super.getFuelConsumption();
-    }
-
-    @Override
-    public double getEnginePower(){
-        return super.getEnginePower();
-    }
-
     public double calculateRentability() {
         return BASE_AIRPLANE_RENTABILITY_COEFFICIENT * engineNumber;
     }
