@@ -128,6 +128,11 @@ public class Demo {
                 total++;
                 System.out.println(s);
             }
+
+            // Find word in sentence
+
+
+
             System.out.println("Number of sentences: " + sentences.size());
             System.out.println("Number of words: " + words.size());
             System.out.println("Numbers of punctuation marks: " + sum);
@@ -137,6 +142,10 @@ public class Demo {
         } catch (IOException io) {
             io.printStackTrace();
         }
-        FindWord.compareTo("you", "How are you? What's wrong with you?");
+        try {
+            FindWord.compareTo("ежевики");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
