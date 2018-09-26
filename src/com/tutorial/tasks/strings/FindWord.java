@@ -9,9 +9,10 @@ import java.util.List;
 // Найти такое слово в первом предложении, которого нет ни в одном из остальных предложений
 public class FindWord {
 
-    String line;
+    //String line;
     private String word;
     private int startIndex;
+    String wordFromFile;
 
     private static final String WORD_REGEX = "\\s"; //[\.; \?! \—\,];
 
@@ -20,24 +21,40 @@ public class FindWord {
         this.word = word;
     }
 
+    public int getStartIndex() {
+        return startIndex;
+    }
+
+    public void setWordFromFile() {
+        this.wordFromFile = wordFromFile;
+    }
+
+    public String getWordFromFile() {
+        return wordFromFile;
+    }
+
     public static void compareTo(String word) throws IOException {
         int startIndex = 0;
         BufferedReader reader = new BufferedReader(new FileReader(
                 "D:\\JavaProjects\\labs\\src\\com\\tutorial\\tasks\\strings\\task3\\test.txt"
         ));
-        String line = reader.readLine();
+        String line;
         List<FindWord> findWords = new ArrayList<>();
         while ((line = reader.readLine()) != null) {
-           String[] splitWord = line.split(WORD_REGEX);
+            String[] splitWord = line.split(WORD_REGEX);
 
-            for (int i = 0; i < splitWord.length -1; i++) {
+            for (int i = 0; i < splitWord.length - 1; i++) {
                 findWords.add(new FindWord(splitWord[i]));
-                if (splitWord[i] == word) //text.indexOf(word) != -1 line.compareToIgnoreCase(word) < 0
-                    startIndex = i;
-                System.out.println("The word '" + word + "' includes first in text '" + splitWord[i] +
-                        "' at position " + startIndex);
-                break;
+                startIndex = findWords.size();
+                line = splitWord[i];
             }
+            if (line == word) { //text.indexOf(word) != -1 line.compareToIgnoreCase(word) < 0
+
+
+                System.out.println("The word '" + word + "' includes first in text '" + splitWord[startIndex] +
+                        "' at position " + startIndex);
+            } else System.out.println("No matches");
+
         }
         reader.close();
 //        for (FindWord find:findWords ){
@@ -45,10 +62,11 @@ public class FindWord {
 //        }
 
     }
-    @Override
-    public String toString(){
-        return line;
-    }
+
+//    @Override
+//    public String toString() {
+//        return line;
+//    }
 }
 
 
