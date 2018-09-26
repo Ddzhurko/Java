@@ -38,7 +38,7 @@ public class FindWord {
         BufferedReader reader = new BufferedReader(new FileReader(
                 "D:\\JavaProjects\\labs\\src\\com\\tutorial\\tasks\\strings\\task3\\test.txt"
         ));
-        String line;
+        String line, source;
         List<FindWord> findWords = new ArrayList<>();
         while ((line = reader.readLine()) != null) {
             String[] splitWord = line.split(WORD_REGEX);
@@ -46,14 +46,17 @@ public class FindWord {
             for (int i = 0; i < splitWord.length - 1; i++) {
                 findWords.add(new FindWord(splitWord[i]));
                 startIndex = findWords.size();
-                line = splitWord[i];
+                source = splitWord[i];
+                if (source.equals(word)) {  //text.indexOf(word) != -1 line.compareToIgnoreCase(word) < 0
+
+                    System.out.println("The word '" + word + "' includes in text '" + line +
+                            "' at position " + startIndex);
+                }
+//                else if (source.compareTo(word) ){
+//                    System.out.println("No matches");
+//                }
             }
-            if (line == word) { //text.indexOf(word) != -1 line.compareToIgnoreCase(word) < 0
 
-
-                System.out.println("The word '" + word + "' includes first in text '" + splitWord[startIndex] +
-                        "' at position " + startIndex);
-            } else System.out.println("No matches");
 
         }
         reader.close();
@@ -68,5 +71,6 @@ public class FindWord {
 //        return line;
 //    }
 }
+
 
 

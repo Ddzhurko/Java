@@ -143,7 +143,7 @@ public class Demo {
             io.printStackTrace();
         }
         try {
-            FindWord.compareTo("ежевики");
+            FindWord.compareTo("Яксли");
         } catch (IOException e) {
             e.printStackTrace();
         }
