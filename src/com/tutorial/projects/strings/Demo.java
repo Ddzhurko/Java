@@ -18,7 +18,7 @@ public class Demo {
     public static void main(String[] args) {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(
-                    "D:\\JavaProjects\\labs\\src\\com\\tutorial\\projects\\strings\\task3\\test.txt"
+                    "D:\\JavaProjects\\GitHub\\Java\\src\\com\\tutorial\\projects\\strings\\test.txt"
             ));
 
             List<Sentence> sentences = new ArrayList<>();
@@ -44,7 +44,7 @@ public class Demo {
             // WORDS
 
             BufferedReader readerWord = new BufferedReader(new FileReader(
-                    "D:\\JavaProjects\\labs\\src\\com\\tutorial\\projects\\strings\\task3\\test.txt"
+                    "D:\\JavaProjects\\GitHub\\Java\\src\\com\\tutorial\\projects\\strings\\test.txt"
             ));
             String word;
             List<Word> words = new ArrayList<>();
@@ -66,7 +66,7 @@ public class Demo {
             //  Pattern pattern = Pattern.compile("[.?!—,]");
             //   Matcher matcher = Pattern.compile(("[.?!—,]")).matcher();
             BufferedReader readerSign = new BufferedReader(new FileReader(
-                    "D:\\JavaProjects\\labs\\src\\com\\tutorial\\projects\\strings\\task3\\test.txt"
+                    "D:\\JavaProjects\\GitHub\\Java\\src\\com\\tutorial\\projects\\strings\\test.txt"
             ));
             List<PunctuationMark> signs = new ArrayList<>();
 //            while (matcher.find())
@@ -97,7 +97,7 @@ public class Demo {
 
             //SYMBOL
             BufferedReader readerSymbol = new BufferedReader(new FileReader(
-                    "D:\\JavaProjects\\labs\\src\\com\\tutorial\\projects\\strings\\task3\\test.txt"
+                    "D:\\JavaProjects\\GitHub\\Java\\src\\com\\tutorial\\projects\\strings\\test.txt"
             ));
             List<Symbol> symbols = new ArrayList<>();
             int total = 0;

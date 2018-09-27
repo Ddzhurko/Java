@@ -36,7 +36,7 @@ public class FindWord {
     public static void compareTo(String word) throws IOException {
         int startIndex = 0;
         BufferedReader reader = new BufferedReader(new FileReader(
-                "D:\\JavaProjects\\labs\\src\\com\\tutorial\\projects\\strings\\task3\\test.txt"
+                "D:\\JavaProjects\\GitHub\\Java\\src\\com\\tutorial\\projects\\strings\\test.txt"
         ));
         String line;
         String source;
