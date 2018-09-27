@@ -33,7 +33,7 @@
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name = "tariffication">
-								<xs:element value = "12 | 60">
+								<xs:pattern value = "12 | 60"/>
 							</xs:element>
 							<xs:element name = "priceForApply">
 								<xs:pattern value = "\p{N}+"/>
