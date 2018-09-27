@@ -28,22 +28,6 @@ public class Demo {
             while ((line = reader.readLine()) != null) {
                 String[] splitSent = line.split(SENTENСE_REGEX);
 
-//                if (splitSent.length == 1) {
-//                    if (splitSent[0].equals("")) {
-//                        continue;
-//                    }
-//                    if (Character.isLowerCase(splitSent[0].charAt(0))) {
-//                        sentences.add(new Sentence(last + " " + splitSent[0]));
-//                    } else {
-//                        sentences.add(new Sentence(splitSent[0]));
-//                    }
-//                } else {
-//                    if (splitSent[0].equals("")) {
-//                        continue;
-//                    }
-//                    if (Character.isLowerCase(splitSent[0].charAt(0))) {
-//                        sentences.add(new Sentence(last + " " + splitSent[0]));
-//                    } else {
                 for (int i = 0; i < splitSent.length - 1; i++) {
                     sentences.add(new Sentence(splitSent[i]));
                 }
@@ -109,7 +93,7 @@ public class Demo {
                 }
 
             }
-             readerSign.close();
+            readerSign.close();
 
             //SYMBOL
             BufferedReader readerSymbol = new BufferedReader(new FileReader(
@@ -117,20 +101,19 @@ public class Demo {
             ));
             List<Symbol> symbols = new ArrayList<>();
             int total = 0;
-            while ((line = readerSymbol.readLine()) != null){
+            while ((line = readerSymbol.readLine()) != null) {
                 String[] splitSymbol = line.split(SYMBOL_REGEX);
                 for (int i = 0; i < splitSymbol.length - 1; i++) {
                     symbols.add(new Symbol(splitSymbol[i]));
                 }
             }
             readerSymbol.close();
-            for (Symbol s:symbols){
+            for (Symbol s : symbols) {
                 total++;
                 System.out.println(s);
             }
 
             // Find word in sentence
-
 
 
             System.out.println("Number of sentences: " + sentences.size());
@@ -143,7 +126,7 @@ public class Demo {
             io.printStackTrace();
         }
         try {
-            FindWord.compareTo("Яксли");
+            FindWord.compareTo("тщ");
         } catch (IOException e) {
             e.printStackTrace();
         }

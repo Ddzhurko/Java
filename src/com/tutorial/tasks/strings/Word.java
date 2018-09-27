@@ -4,7 +4,7 @@ public class Word {
     private String w;
 
     public Word(String word) {
-        this.w = word.replaceAll("[,|.|?|!|\\s—\\s|\\n\\n—\\s]", "");
+        this.w = word.replaceAll("[…|,|.|?|!|\\s—\\s|\\n\\n—\\s]", "");
     }
 
     @Override

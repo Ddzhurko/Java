@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-// Найти такое слово в первом предложении, которого нет ни в одном из остальных предложений
+// Найти слово в текстовом файле
 public class FindWord {
 
     //String line;
@@ -38,7 +38,9 @@ public class FindWord {
         BufferedReader reader = new BufferedReader(new FileReader(
                 "D:\\JavaProjects\\labs\\src\\com\\tutorial\\tasks\\strings\\task3\\test.txt"
         ));
-        String line, source;
+        String line;
+        String source;
+
         List<FindWord> findWords = new ArrayList<>();
         while ((line = reader.readLine()) != null) {
             String[] splitWord = line.split(WORD_REGEX);
@@ -52,24 +54,13 @@ public class FindWord {
                     System.out.println("The word '" + word + "' includes in text '" + line +
                             "' at position " + startIndex);
                 }
-//                else if (source.compareTo(word) ){
-//                    System.out.println("No matches");
-//                }
             }
 
-
         }
+        if ((line = reader.readLine()) == null)
+            System.out.println("Слова " + word + " в файле нет");
         reader.close();
-//        for (FindWord find:findWords ){
-//            System.out.println("find: " + find);
-//        }
-
     }
-
-//    @Override
-//    public String toString() {
-//        return line;
-//    }
 }
 
 

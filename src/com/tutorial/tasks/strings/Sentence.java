@@ -4,7 +4,7 @@ public class Sentence {
     private String s;
 
     public Sentence(String sentence) {
-        this.s = sentence.replaceAll("[.|?|!|\\n—|\\n\\n]", ""); //[.|?|!|—|\n\n]
+        this.s = sentence.replaceAll("[,|.|?|!|\\n—|\\n\\n]", ""); //[.|?|!|—|\n\n]
     }
 
     @Override
