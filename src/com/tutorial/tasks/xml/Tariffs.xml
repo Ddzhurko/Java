@@ -1,0 +1,32 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!-- Тарифы мобильных компаний.
+Тарифы мобильных компаний могут иметь следующую структуру:
+•	Name – название тарифа.
+•	Operator name – название сотового оператора, которому принадлежит тариф.
+•	Payroll – абонентская плата в месяц (0 – n рублей).
+•	Сall prices (должно быть несколько) – цены на звонки: внутри сети 
+(0 – n рублей в минуту), вне сети (0 – n рублей в минуту), на стационарные телефоны (0 – n рублей в минуту).
+•	SMS price – цена за смс (0 – n рублей).
+•	Parameters (должно быть несколько) – наличие любимого номера 
+(0 – n), тарификация (12-секундная, минутная), плата за подключение 
+к тарифу (0 – n рублей).
+Корневой элемент назвать Tariff.
+-->
+<tariff>
+<name>FreeInternet</name>
+<operatorname>Kyivstar</operatorname>
+<payroll>30 hrn</payroll>
+<callprices> 
+	<priceincell>0</priceincell>
+	<priceoutcell>1</priceoutcell>
+	<pricestaionary>2</pricestaionary>
+</callprices>
+<smsprice>0</smsprice>
+<favouritenumber>
+	<favouritenumber>1</favouritenumber>
+	<tariffication>60</tariffication>
+	<priceforapply>30</priceforapply>
+</favouritenumber>
+
+</tariff>
