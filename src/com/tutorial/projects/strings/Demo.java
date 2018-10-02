@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Demo {
 
-    private static final String SENTENСE_REGEX = "(?=[.|?|!|—]|\\n)"; //(?=[\.\!\?]);
+    private static final String SENTENСE_REGEX = "(?=[\\.\\!\\?])"; //(?=[\.\!\?]);
     private static final String WORD_REGEX = "\\s"; //[\.; \?! \—\,];
     private static final String SYMBOL_REGEX = "(?!= [|\\s|,\\s|.|\\f])";
 
