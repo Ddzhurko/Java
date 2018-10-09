@@ -45,7 +45,7 @@ public class FindWord {
         while ((line = reader.readLine()) != null) {
             String[] splitWord = line.split(WORD_REGEX);
 
-            for (int i = 0; i < splitWord.length - 1; i++) {
+            for (int i = 0; i < splitWord.length; i++) {
                 findWords.add(new FindWord(splitWord[i]));
                 startIndex = findWords.size();
                 source = splitWord[i];

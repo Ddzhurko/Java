@@ -134,7 +134,7 @@ public class Demo {
             int total = 0;
             while ((line = readerSymbol.readLine()) != null) {
                 String[] splitSymbol = line.split(SYMBOL_REGEX);
-                for (int i = 0; i < splitSymbol.length - 1; i++) {
+                for (int i = 0; i < splitSymbol.length; i++) {
                     symbols.add(new Symbol(splitSymbol[i]));
                 }
             }
