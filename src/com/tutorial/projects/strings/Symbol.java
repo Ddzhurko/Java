@@ -5,7 +5,7 @@ public class Symbol {
     private String s;
 
     public Symbol(String symbol) {
-        s = symbol.replaceAll("[,|.|?|!]", "");
+        s = symbol;
     }
 
     @Override
