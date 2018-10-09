@@ -58,7 +58,7 @@ public class FindWord {
 
         }
         if ((line = reader.readLine()) == null)
-            System.out.println("Слова " + word + " в файле нет");
+            System.out.println("Слова " + word + " в файле больше нет");
         reader.close();
     }
 }
