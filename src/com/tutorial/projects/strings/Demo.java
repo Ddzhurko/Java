@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 public class Demo {
 
     private static final String SENTENСE_REGEX = "[.|?|!|;|-|!-]";//"[.?!-;]+;";
-    private static final String WORD_REGEX = "[\\s|.|?|!|;|-|!-]"; //[\.; \?! \—\,];
+    private static final String WORD_REGEX = "[\\s|,|.|?|!|;|!|-]"; //[\.; \?! \—\,];
     private static final String SYMBOL_REGEX = "(?!= [|\\s|,\\s|.|\\f])";
 
     public static void main(String[] args) throws IOException {
