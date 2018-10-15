@@ -13,7 +13,7 @@ public class Volt {
     }
 
     public void setVolts(int v) {
-        this.volts = volts;
+        this.volts = v;
     }
 
 
