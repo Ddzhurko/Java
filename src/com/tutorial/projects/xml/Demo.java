@@ -5,14 +5,14 @@ import java.util.Comparator;
 
 public class Demo {
     public static void main(String[] args) {
-        Tariff tariff1 = new Tariff("A", "Vodafone", 30, 0, 1,
+        Tariff tariff1 = new Tariff("ForEveryone", "Vodafone", 30, 0, 1,
+                1, 1, 1, 0, 20);
+        Tariff tariff2 = new Tariff("FreeInternet", "Kyivstar", 30, 0, 1,
+                2, 0, 1, 0, 30);
+        Tariff tariff3 = new Tariff("LifeHack", "Life", 30, 0, 1,
                 1, 1, 1, 5, 20);
-        Tariff tariff2 = new Tariff("B", "Kyivstar", 20, 0, 1,
-                1, 1, 1, 5, 20);
-        Tariff tariff3 = new Tariff("C", "Lafe", 30, 0, 1,
-                1, 1, 1, 5, 20);
-        Tariff tariff4 = new Tariff("D", "Beeline", 60, 0, 1,
-                1, 1, 1, 5, 20);
+        Tariff tariff4 = new Tariff("NoBorder", "Beeline", 60, 0, 1,
+                1, 1, 1, 0, 20);
 
         ArrayList<Tariff> list = new ArrayList<>();
         list.add(tariff1);

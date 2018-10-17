@@ -13,20 +13,65 @@
 к тарифу (0 – n рублей).
 Корневой элемент назвать Tariff.
 -->
-<tariff>
-<name>FreeInternet</name>
-<operatorname>Kyivstar</operatorname>
-<payroll>30 hrn</payroll>
-<callprices> 
-	<priceincell>0</priceincell>
-	<priceoutcell>1</priceoutcell>
-	<pricestaionary>2</pricestaionary>
-</callprices>
-<smsprice>0</smsprice>
-<favouritenumber>
-	<favouritenumber>1</favouritenumber>
-	<tariffication>60</tariffication>
-	<priceforapply>30</priceforapply>
-</favouritenumber>
+<tariffs>
 
-</tariff>
+    <name>ForEveryone</name>
+    <operatorname>Vodafone</operatorname>
+    <payroll>30</payroll>
+    <callprices>
+        <priceincell>0</priceincell>
+        <priceoutcell>1</priceoutcell>
+        <pricestaionary>1</pricestaionary>
+    </callprices>
+    <smsprice>1</smsprice>
+    <favourite>
+        <favouritenumber>1</favouritenumber>
+        <tariffication>0</tariffication>
+        <priceforapply>20</priceforapply>
+    </favourite>
+
+    <name>LifeHack</name>
+    <operatorname>Life</operatorname>>
+    <payroll>30</payroll>>
+    <callprices>
+        <priceincell>0</priceincell>
+        <priceoutcell>1</priceoutcell>
+        <pricestationary>1</pricestationary>
+    </callprices>
+    <smsprice>1</smsprice>
+    <favourite>
+        <favouritenumber>1</favouritenumber>
+        <tarrification>0</tarrification>
+        <priceforapply>20</priceforapply>
+    </favourite>
+
+    <name>FreeInternet</name>
+    <operatorname>Kyivstar</operatorname>
+    <payroll>30 hrn</payroll>
+    <callprices>
+        <priceincell>0</priceincell>
+        <priceoutcell>1</priceoutcell>
+        <pricestaionary>2</pricestaionary>
+    </callprices>
+    <smsprice>0</smsprice>
+    <favourite>
+        <favouritenumber>1</favouritenumber>
+        <tariffication>0</tariffication>
+        <priceforapply>30</priceforapply>
+    </favourite>
+
+    <name>NoBorder</name>
+    <operatorname>Beeline</operatorname>
+    <payroll>60</payroll>
+    <callprices>
+        <priceincell>0</priceincell>
+        <priceoutcell>1</priceoutcell>
+        <pricestaionary>1</pricestaionary>
+    </callprices>
+    <smsprice>1</smsprice>
+    <favourite>
+        <favouritenumber>1</favouritenumber>
+        <tariffication>0</tariffication>
+        <priceforapply>20</priceforapply>
+    </favourite>
+</tariffs>
