@@ -1,34 +1,42 @@
 package com.tutorial.projects.xml.parsers.xmlparser;
 
-import org.xml.sax.Attributes;
+
+import com.tutorial.projects.xml.Tariff;
+import com.tutorial.projects.xml.parsers.MyHandler;
 import org.xml.sax.SAXException;
-import org.xml.sax.helpers.DefaultHandler;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
-import java.io.FileInputStream;
-import java.util.ArrayList;
+import java.io.IOException;
+import java.util.List;
 
 public class XmlParsersSax {
 
-
-
     public static void main(String[] args) {
-        {
-            //Locate the file
-            File xmlFile = new File("D:\\JavaProjects\\GitHub\\Java\\src\\com\\tutorial\\projects\\xml\\Tariffs.xml");
 
-//            Create the parser instance
-//            UsersXmlParser parser = new UsersXmlParser();
+        SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
+        try {
 
-            //Parse the file
-//            ArrayList users = parser.parseXml(new FileInputStream(xmlFile));
+        SAXParser saxParser = saxParserFactory.newSAXParser();
+            MyHandler handler = new MyHandler();
+            saxParser.parse(new File("D:\\JavaProjects\\GitHub\\Java\\src\\com\\tutorial\\projects\\xml\\Tariffs.xml"), handler);
 
-            //Verify the result
-//            System.out.println(users);
+            //get Tariffs list
+            List<Tariff> tariffList = handler.getTariffList();
+
+            //print tariff information
+            for (Tariff tariff: tariffList)
+                System.out.println(tariff);
+
+    }
+ catch (SAXException e) {
+            e.printStackTrace();
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
-
 }
