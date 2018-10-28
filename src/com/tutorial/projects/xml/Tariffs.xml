@@ -34,8 +34,8 @@
 
     <tariff>
         <name>LifeHack</name>
-        <operatorname>Life</operatorname>>
-        <payroll>30</payroll>>
+        <operatorname>Life</operatorname>
+        <payroll>30</payroll>
         <callprices>
             <priceincell>0</priceincell>
             <priceoutcell>1</priceoutcell>
