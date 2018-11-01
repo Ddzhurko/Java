@@ -15,7 +15,7 @@
 -->
 <tariffs>
 
-    <tariff>
+    <tariff id="1">
         <name>ForEveryone</name>
         <operatorname>Vodafone</operatorname>
         <payroll>30</payroll>
@@ -32,7 +32,7 @@
         </favourite>
     </tariff>
 
-    <tariff>
+    <tariff id="2">
         <name>LifeHack</name>
         <operatorname>Life</operatorname>
         <payroll>30</payroll>
@@ -49,10 +49,10 @@
         </favourite>
     </tariff>
 
-    <tariff>
+    <tariff id="3">
         <name>FreeInternet</name>
         <operatorname>Kyivstar</operatorname>
-        <payroll>30 hrn</payroll>
+        <payroll>30</payroll>
         <callprices>
             <priceincell>0</priceincell>
             <priceoutcell>1</priceoutcell>
@@ -66,7 +66,7 @@
         </favourite>
     </tariff>
 
-    <tariff>
+    <tariff id="4">
         <name>NoBorder</name>
         <operatorname>Beeline</operatorname>
         <payroll>60</payroll>

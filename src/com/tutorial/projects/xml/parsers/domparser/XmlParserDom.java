@@ -36,32 +36,29 @@ public class XmlParserDom {
             Node currentNode = nodeList.item(count);
 
             //check for node
-            if (currentNode.getNodeType() == Node.ELEMENT_NODE) {
 
-                //get node and value
+            //get node and value
 
-                System.out.println("\nNode name = " + currentNode.getNodeName() + " [OPEN]");
-                System.out.println("Node value = " + currentNode.getTextContent());
+            System.out.println("\nNode name = " + currentNode.getNodeName() + " [OPEN]");
+            System.out.println("Node value = " + currentNode.getTextContent());
 
-                if (currentNode.hasAttributes()) {
+            if (currentNode.hasAttributes()) {
 
 //                    get attributes names and values
 
-                    NamedNodeMap nodeMap = currentNode.getAttributes();
-                    for (int i = 0; i < nodeMap.getLength(); i++) {
-                        Node node = nodeMap.item(i);
-                        System.out.println("Attribute name = " + node.getNodeName());
-                        System.out.println("Attribute value = " + node.getNodeValue());
-                    }
+                NamedNodeMap nodeMap = currentNode.getAttributes();
+                for (int i = 0; i < nodeMap.getLength(); i++) {
+                    Node node = nodeMap.item(i);
+                    System.out.println("Attribute name = " + node.getNodeName());
+                    System.out.println("Attribute value = " + node.getNodeValue());
                 }
-                if (currentNode.hasChildNodes()) {
-
-                    //searching for nodes
-                    printNote(currentNode.getChildNodes());
-                }
-                System.out.println("Node name = " + currentNode.getNodeName() + " [CLOSE]");
             }
+            if (currentNode.hasChildNodes()) {
+
+                //searching for nodes
+                printNote(currentNode.getChildNodes());
+            }
+            System.out.println("Node name = " + currentNode.getNodeName() + " [CLOSE]");
         }
     }
-
 }

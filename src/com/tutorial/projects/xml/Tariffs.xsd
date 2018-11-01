@@ -1,49 +1,49 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
-<xs:schema 	xmlns:xs = "http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-<xs:element name = "tariff">
-	<xs:complexType>
-		<xs:sequence>
-			<xs:element name = "title" type = "xs:string"/>
-			<xs:element name = "operatorName" type = "xs:string"/>
-			<xs:element name = "payroll">
-				<xs:pattern value = "\p{N}+"/>
-			</xs:element>
-			<xs:element name = "callPrices">
-				<xs:pattern value = "\{3}"/>
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name = "priceInCell">
-								<xs:pattern value = "\p{N}+"/>
-							</xs:element>	
-							<xs:element name = "priceOutCell">
-								<xs:pattern value = "\p{N}+"/>
-							</xs:element>
-							<xs:element name = "priceSationary">
-								<xs:pattern value = "\p{N}+"/>
-							</xs:element>
-						</xs:sequence>
-					</xs:complexType>
-			</xs:element>
-			<xs:element name = "smsPrice">
-				<xs:pattern value = "\p{N}+"/>
-			</xs:element>
-			<xs:element name = "favouriteNumber">
-				<xs:pattern value = "(\p{N}){,2}"/>
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name = "tariffication">
-								<xs:pattern value = "12 | 60"/>
-							</xs:element>
-							<xs:element name = "priceForApply">
-								<xs:pattern value = "\p{N}+"/>
-							</xs:element>
-						</xs:sequence>
-					</xs:complexType>
-			</xs:element>
-				
-		</xs:sequence>
-	</xs:complexType>	
-</xs:element>	
+    <xs:element name="tariff">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="title" type="xs:string"/>
+                <xs:element name="operatorName" type="xs:string"/>
+                <xs:element name="payroll">
+                    <xs:pattern value="\p{N}+"/>
+                </xs:element>
+                <xs:element name="callPrices">
+                    <xs:pattern value="\{3}"/>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="priceInCell">
+                                <xs:pattern value="\p{N}+"/>
+                            </xs:element>
+                            <xs:element name="priceOutCell">
+                                <xs:pattern value="\p{N}+"/>
+                            </xs:element>
+                            <xs:element name="priceSationary">
+                                <xs:pattern value="\p{N}+"/>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="smsPrice">
+                    <xs:pattern value="\p{N}+"/>
+                </xs:element>
+                <xs:element name="favouriteNumber">
+                    <xs:pattern value="(\p{N}){,2}"/>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="tariffication">
+                                <xs:pattern value="12 | 60"/>
+                            </xs:element>
+                            <xs:element name="priceForApply">
+                                <xs:pattern value="\p{N}+"/>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
 </xs:schema>

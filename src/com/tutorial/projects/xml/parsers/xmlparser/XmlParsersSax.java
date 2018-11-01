@@ -19,23 +19,17 @@ public class XmlParsersSax {
         SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
         try {
 
-        SAXParser saxParser = saxParserFactory.newSAXParser();
+            SAXParser saxParser = saxParserFactory.newSAXParser();
             MyHandler handler = new MyHandler();
-            saxParser.parse(new File("D:\\JavaProjects\\GitHub\\Java\\src\\com\\tutorial\\projects\\xml\\Tariffs.xml"), handler);
+            saxParser.parse(new File("D:/JavaProjects/GitHub/Java/src/com/tutorial/projects/xml/Tariffs.xml"), handler);
 
             //get Tariffs list
             List<Tariff> tariffList = handler.getTariffList();
 
             //print tariff information
-            for (Tariff tariff: tariffList)
+            for (Tariff tariff : tariffList)
                 System.out.println(tariff);
-
-    }
- catch (SAXException e) {
-            e.printStackTrace();
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
         }
     }
